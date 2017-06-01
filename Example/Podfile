@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GATracker_Example' do
+  pod 'GATracker', :path => '../'
+
+  target 'GATracker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

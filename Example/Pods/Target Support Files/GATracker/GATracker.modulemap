@@ -1,0 +1,6 @@
+framework module GATracker {
+  umbrella header "GATracker-umbrella.h"
+
+  export *
+  module * { export * }
+}

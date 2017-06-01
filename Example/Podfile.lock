@@ -1,0 +1,16 @@
+PODS:
+  - GATracker (0.1.0)
+
+DEPENDENCIES:
+  - GATracker (from `../`)
+
+EXTERNAL SOURCES:
+  GATracker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GATracker: aeb3adacb2633d41adc214b482b11dad2071d67c
+
+PODFILE CHECKSUM: c3da853e7adb7d93fb47140c0687d81f2494eefb
+
+COCOAPODS: 1.2.1

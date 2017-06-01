@@ -1,0 +1,6 @@
+framework module Pods_GATracker_Example {
+  umbrella header "Pods-GATracker_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
