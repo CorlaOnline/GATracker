@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import GATracker
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+      
+        GATracker.sharedInstance.event(category: "YOUR_CATEGORY",
+                                       action: "YOUR_ACTION",
+                                       label: "YOUR_LABEL",
+                                       customParameters: nil)
+      
+        GATracker.sharedInstance.screenView(screenName: "YOUR_VIEW",
+                                            customParameters: nil)
+      
     }
 
     override func didReceiveMemoryWarning() {

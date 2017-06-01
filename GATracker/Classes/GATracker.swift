@@ -8,9 +8,9 @@
 
 import Foundation
 
-private var _analyticsTracker: GATracker!
+var _analyticsTracker: GATracker!
 
-class GATracker {
+open class GATracker {
   /*
    Define properties
    @tid = Google Analytics property id
@@ -29,7 +29,7 @@ class GATracker {
   var ul : String
   
   //Set up singleton object for the tracker
-  class func setup(_ tid: String) -> GATracker {
+  open class func setup(_ tid: String) -> GATracker {
     struct Static {
       static var onceToken = 0
     }
@@ -39,7 +39,7 @@ class GATracker {
     return _analyticsTracker
   }
   
-  class var sharedInstance: GATracker! {
+  open class var sharedInstance: GATracker! {
     if _analyticsTracker == nil {
       #if DEBUG
         print("Analytics Tracker not set up")
@@ -121,7 +121,7 @@ class GATracker {
     }
   }
   
-  func screenView(screenName: String, customParameters: Dictionary<String, String>?) {
+  open func screenView(screenName: String, customParameters: Dictionary<String, String>?) {
     /*
      A screenview hit, use screenname
      */
@@ -134,7 +134,7 @@ class GATracker {
     self.send(type: "screenview", params: params)
   }
   
-  func event(category: String, action: String, label: String?, customParameters: Dictionary<String, String>?) {
+  open func event(category: String, action: String, label: String?, customParameters: Dictionary<String, String>?) {
     /*
      An event hit with category, action, label
      */
